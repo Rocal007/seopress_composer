@@ -1,0 +1,360 @@
+/*
+* Menu Class
+*/
+
+body{
+	font-size: 1.2em;
+}
+
+#navbarouter {
+  z-index: 999;
+  width: 100%;
+}
+
+#navigation {
+  float: right;
+  margin-top: 50px;
+}
+
+
+.navbar {
+  margin-bottom: 0;
+  min-height: 5px;
+  border:none;
+}
+
+#primary-menu {
+  margin-left: 35px;
+}
+
+
+#navbar ul li,
+#navbar ul li a {
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+  padding: 10px;
+	color: white;
+	font-size: 16px;
+}
+
+ul.navbar-nav li a {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 4px;
+  text-transform: uppercase;
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+  background-color: unset;
+}
+
+.navbar-collapse {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+sub, sup {
+  position: relative;
+  font-size: 50%;
+  line-height: 0;
+  vertical-align: baseline;
+  top: -0.8em;
+}
+
+.anchors-container {
+  margin: 20px auto 50px auto;
+}
+
+
+
+body{
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* align-wide support */
+
+.entry-content .alignfull {
+  margin-left  : calc( -100vw / 2 + 100% / 2 );
+  margin-right : calc( -100vw / 2 + 100% / 2 );
+  max-width    : 100vw;
+}
+
+.entry-content .alignwide {
+  margin-left: calc( -87vw / 2 + 100% / 2 );
+  margin-right: calc( -87vw / 2 + 100% / 2 );
+  max-width: 100vw;
+}
+
+/* align-wide support END */
+
+.size-auto, 
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+
+.entry-content iframe {
+  max-width: 100%;
+}
+
+.clearboth
+{
+  clear:both;
+}
+
+a:focus {
+  outline: unset !important;
+}
+
+.breadcrumb > li + li::before {
+  content: "\f101" !important;
+  font-family: fontawesome !important;
+  color: #757575 !important;
+}
+
+/*
+* Quick Common class
+*/
+
+.displaynon {
+  display: none;
+}
+
+.mr0 {
+    margin: 0
+}
+
+.mr5 {
+    margin: 5px
+}
+
+.mr10 {
+    margin: 10px
+}
+
+.mr15 {
+    margin: 15px
+}
+
+.mr20 {
+    margin: 20px
+}
+
+.mrt5 {
+    margin-top: 5px
+}
+
+.mrt10 {
+    margin-top: 10px
+}
+
+.mrt15 {
+    margin-top: 15px
+}
+
+.mrt20 {
+    margin-top: 20px
+}
+
+.mrtb50 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.mrr5 {
+    margin-right: 5px
+}
+
+.mrr10 {
+    margin-right: 10px
+}
+
+.mrr15 {
+    margin-right: 15px
+}
+
+.mrr20 {
+    margin-right: 20px
+}
+
+.mrb5 {
+    margin-bottom: 5px
+}
+
+.mrb10 {
+    margin-bottom: 10px
+}
+
+.mrb15 {
+    margin-bottom: 15px
+}
+
+.mrb20 {
+    margin-bottom: 20px
+}
+
+.mrl5 {
+    margin-left: 5px
+}
+
+.mrl10 {
+    margin-left: 10px
+}
+
+.mrl15 {
+    margin-left: 15px
+}
+
+.mrl20 {
+    margin-left: 20px
+}
+
+.pd0 {
+    padding: 0
+}
+
+.pd5 {
+    padding: 5px
+}
+
+.pd10 {
+    padding: 10px
+}
+
+.pd15 {
+    padding: 15px
+}
+
+.pd20 {
+    padding: 20px
+}
+
+.pdt5 {
+    padding-top: 5px
+}
+
+.pdt10 {
+    padding-top: 10px
+}
+
+.pdt15 {
+    padding-top: 15px
+}
+
+.pdt20 {
+    padding-top: 20px
+}
+
+.pdr5 {
+    padding-right: 5px
+}
+
+.pdr10 {
+    padding-right: 10px
+}
+
+.pdr15 {
+    padding-right: 15px
+}
+
+.pdr20 {
+    padding-right: 20px
+}
+
+.pdb5 {
+    padding-bottom: 5px
+}
+
+.pdb10 {
+    padding-bottom: 10px
+}
+
+.pdb15 {
+    padding-bottom: 15px
+}
+
+.pdb20 {
+    padding-bottom: 20px
+}
+
+.pdl5 {
+    padding-left: 5px
+}
+
+.pdl10 {
+    padding-left: 10px
+}
+
+.pdl15 {
+    padding-left: 15px
+}
+
+.pdl20 {
+    padding-left: 20px
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+.alignl {
+    text-align: left
+}
+
+.alignc {
+    text-align: center
+}
+
+.alignr {
+    text-align: right
+}
+
+.alignnone {
+    margin: 5px 20px 20px 0
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto
+}
+
+.alignright {
+    float: right;
+    margin: 5px 0 20px 20px
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px
+}
+
+a img.alignleft,
+a img.alignnone {
+    margin: 5px 20px 20px 0
+}
+
+a img.alignleft {
+    float: left
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}

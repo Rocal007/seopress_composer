@@ -1,0 +1,2 @@
+// Modal
+export default function initModal(){document.querySelectorAll('[data-modal-open]').forEach(btn=>{const id=btn.dataset.modalOpen,modal=document.getElementById(id);if(!modal)return;btn.addEventListener('click',()=>modal.classList.remove('hidden'));});document.querySelectorAll('[data-modal-close]').forEach(btn=>{const modal=btn.closest('[data-modal]');if(!modal)return;btn.addEventListener('click',()=>modal.classList.add('hidden'));});}

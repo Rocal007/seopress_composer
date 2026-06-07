@@ -1,0 +1,2 @@
+// Toggle sections
+export default function initToggle(){document.querySelectorAll('[data-toggle]').forEach(btn=>{const target=document.querySelector(btn.dataset.toggle);if(!target)return;btn.addEventListener('click',()=>{target.classList.toggle('hidden');});});}

@@ -1,0 +1,47 @@
+sub, sup {
+    position: relative;
+    font-size: 50%;
+    line-height: 0;
+    vertical-align: baseline;
+}
+
+.logo-icon {
+  width: 100px;
+  float: left;
+  margin-right: 20px;
+}
+
+.header-title {
+    /*letter-spacing: 1px;*/
+    margin-top: 7px;
+    font-size: 22px;
+    margin-top: 26px;
+}
+
+.header-description {
+  margin-left: 0;
+  margin-top: -10px;
+  font-size: 20px;
+  /*letter-spacing: 0*/;
+  line-height: 1.8;
+  padding-top: 1px;
+}
+
+.header-description-text {
+  background-color: #fff;
+  font-size: smaller;
+  padding-top: 3px;
+  padding-right: 7px;
+  letter-spacing: 1px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  margin-top: 0px;
+  margin-left: -15px;
+}
+
+.header-location {
+  font-size: small;
+  margin-top: 9px;
+  position: absolute;
+  padding-left: 6px;
+}

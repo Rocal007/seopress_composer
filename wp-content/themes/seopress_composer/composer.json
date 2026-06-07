@@ -1,0 +1,39 @@
+{
+  "name": "roland/seopress_composer",
+  "type": "wordpress-theme",
+  "description": "Seopress Composer WordPress Theme mit ServiceContainer und Autowire",
+  "license": "MIT",
+  "require": {
+    "php": ">=7.4",
+    "johnbillion/extended-cpts": "^4.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "SeopressComposer\\Core\\": "inc/Core/",
+      "SeopressComposer\\Models\\": "inc/Models/",
+      "SeopressComposer\\Helpers\\": "inc/Helpers/",
+      "SeopressComposer\\Components\\": "inc/Components/",
+      "SeopressComposer\\Repositories\\": "inc/Repositories/",
+      "SeopressComposer\\Services\\": "inc/Services/",
+      "SeopressComposer\\Data\\": "inc/Data/",
+      "SeopressComposer\\Settings\\": "inc/Settings/",
+      "SeopressComposer\\Layouts\\": "inc/Layouts/",
+      "SeopressComposer\\Controllers\\": "inc/Controllers/",
+      "SeopressComposer\\Factories\\": "inc/Factories/",
+      "SeopressComposer\\Migration\\": "inc/Migration/"
+    }
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true,
+    "allow-plugins": {
+      "composer/installers": true
+    }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ]
+}

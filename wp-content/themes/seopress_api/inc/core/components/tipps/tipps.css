@@ -1,0 +1,39 @@
+/*Tipps*/
+.tip-section {
+    padding: 40px 0 60px;
+}
+
+.tip-container {
+    max-width: 1000px;
+    margin: 50px auto 70px;
+    padding: 0px 0 0px;
+}
+
+.tip-heading {
+    font-weight: 600;
+    margin-top: 13px;
+	cursor:pointer;
+}
+.tip-content {
+    margin-top: 0.3em;
+}
+
+.tip-extension-indicator {
+	float: right;
+}
+
+i.indicator {
+    margin-top: 0px;
+}
+
+.indicator.glyphicon {
+	font-size:35px;
+	color: #EF7F1B;
+	display:none;
+}
+
+.i-amphtml-notbuilt, [layout]:not(.i-amphtml-element), [width][height][heights]:not([layout]):not(.i-amphtml-element), [width][height][sizes]:not(img):not([layout]):not(.i-amphtml-element) {
+    position: relative;
+    overflow: hidden!important;
+    color: black!important;
+}

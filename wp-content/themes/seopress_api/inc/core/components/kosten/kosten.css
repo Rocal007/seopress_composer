@@ -1,0 +1,37 @@
+#pricing-table {
+    padding: 40px 0 25px 0;
+}
+.pricing-heading > p {
+    padding: 50px;
+}
+.pricing-item {
+    background-color: #fff;
+    margin: 0 10px 0 10px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.pricing-divider {
+    border-radius: 20px 20px 0 0;
+    position: relative;
+    top: -51px;
+    font-size: larger;
+    font-weight: 900;
+}
+.desktop.pricing-read-more:hover  {
+    transform: scale(1.05);
+    margin-bottom: -80px;
+}
+
+.pricing-read-more {
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    bottom: 0;
+    width: -webkit-fill-available;
+    font-size: large;
+    padding: 10px;
+    margin-bottom: -50px;
+    border-radius: 0 0 10px 10px;
+}

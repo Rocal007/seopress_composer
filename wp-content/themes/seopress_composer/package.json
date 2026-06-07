@@ -1,0 +1,41 @@
+{
+  "name": "seopress_composer",
+  "version": "2.0.0",
+  "private": true,
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.5",
+    "@tailwindcss/typography": "^0.5.9",
+    "autoprefixer": "^10.4.19",
+    "baseline-browser-mapping": "^2.9.14",
+    "basic-ftp": "^5.1.0",
+    "chalk": "^4.1.2",
+    "chokidar": "^4.0.3",
+    "copyfiles": "^2.4.1",
+    "daisyui": "^4.12.10",
+    "dotenv": "^17.2.3",
+    "postcss": "^8.4.27",
+    "rimraf": "^6.1.2",
+    "sass": "^1.66.1",
+    "tailwindcss": "^3.4.0",
+    "vite": "^4.4.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "clean": "rimraf theme_bundle",
+    "copy:php": "copyfiles -f -e \"test_*.php\" -e \"dump_districts.php\" *.php screenshot.png style.css theme_bundle",
+    "copy:assets": "copyfiles dist/**/* theme_bundle",
+    "copy:dirs": "copyfiles inc/**/* template-parts/**/* vendor/**/* assets/**/* theme_bundle",
+    "bundle": "npm run clean && npm run build && npm run copy:php && npm run copy:assets && npm run copy:dirs",
+    "deploy": "npm run bundle && node deploy.js"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^5.2.8",
+    "@fontsource/lato": "^5.2.7",
+    "@fontsource/merriweather": "^5.2.11",
+    "@fontsource/montserrat": "^5.2.8",
+    "@fontsource/open-sans": "^5.2.7",
+    "@fontsource/playfair-display": "^5.2.8",
+    "@fontsource/roboto": "^5.2.9"
+  }
+}

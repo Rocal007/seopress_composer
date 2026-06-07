@@ -1,0 +1,227 @@
+/* ==========================================================================
+   SEOPress Video Carousel Styling
+   ========================================================================== */
+
+/* 1. Sektion und Container
+   ========================================================================== */
+.seopress-video-section {
+  position: relative;
+  /* padding-top/bottom sollte von .pdtb-default kommen */
+}
+
+.seopress-container {
+  width: 100%;
+  max-width: 1200px;
+  /* Oder dein Theme-Standard */
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* 2. Carousel Wrapper und Steuerung
+   ========================================================================== */
+.seopress-video-carousel-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.seopress-video-carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.seopress-video-slide {
+  flex-shrink: 0;
+  width: 100%;
+  padding: 0 5px;
+  /* Kleiner Abstand, falls Karten nebeneinander stehen */
+  box-sizing: border-box;
+}
+
+/* 3. Karussell-Steuerung (Pfeile)
+   ========================================================================== */
+.seopress-carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  color: var(--color-secondary);
+}
+
+.seopress-carousel-control:hover {
+  background-color: rgba(255, 255, 255, 1);
+  color: var(--color-primary);
+}
+
+.seopress-carousel-control.seopress-prev {
+  left: 10px;
+}
+
+.seopress-carousel-control.seopress-next {
+  right: 10px;
+}
+
+/* 4. Video Grid (Innerhalb eines Slides)
+   ========================================================================== */
+.seopress-video-grid {
+  display: grid;
+  gap: 20px;
+  /* Abstand zwischen den Karten */
+}
+
+/* Standard: 1 Spalte (Mobile-First) */
+.seopress-video-grid {
+  grid-template-columns: 1fr;
+}
+
+/* 2 Spalten für `.video-grid-2` und `.video-grid-3` auf Tablets */
+@media (min-width: 768px) {
+
+  .seopress-video-grid-2,
+  .seopress-video-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 3 Spalten für `.video-grid-3` auf Desktops */
+@media (min-width: 992px) {
+  .seopress-video-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* 5. Video Karte & Placeholder
+   ========================================================================== */
+.seopress-video-card {
+  /* Optional: Schatten oder Rahmen */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+  /* Wichtig für abgerundete Ecken am Bild */
+  background-color: var(--color-background-primary);
+}
+
+.seopress-video-ratio-16x9 {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 Verhältnis */
+  height: 0;
+  overflow: hidden;
+  background-color: var(--color-neutral);
+  cursor: pointer;
+}
+
+.seopress-video-ratio-16x9 img,
+.seopress-video-ratio-16x9 iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Stellt sicher, dass das Thumbnail füllt */
+}
+
+.seopress-video-thumbnail {
+  transition: transform 0.3s ease;
+}
+
+/* 6. Play Button Overlay
+   ========================================================================== */
+.seopress-video-play-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+/* Das Icon (SVG, Font) im Overlay */
+.seopress-video-play-overlay>* {
+  color: var(--color-background-primary);
+  font-size: 4rem;
+  /* Größe des Play-Icons anpassen */
+  opacity: 0.9;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: scale(0.9);
+}
+
+/* Hover-Effekte */
+.seopress-video-placeholder:hover .seopress-video-play-overlay {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.seopress-video-placeholder:hover .seopress-video-play-overlay>* {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.seopress-video-placeholder:hover .seopress-video-thumbnail {
+  transform: scale(1.05);
+  /* Leichter Zoom-Effekt */
+}
+
+/* Verstecke Overlay & Thumbnail, wenn das Iframe geladen ist */
+.seopress-video-placeholder[data-loaded="true"] .seopress-video-play-overlay,
+.seopress-video-placeholder[data-loaded="true"] .seopress-video-thumbnail {
+  display: none;
+}
+
+/* 7. Video Metadaten (Text unter dem Video)
+   ========================================================================== */
+.seopress-video-meta {
+  padding: 15px;
+}
+
+.seopress-video-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  /* Ggf. Text-Abschneiden für 2 Zeilen */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 2.4em;
+  /* Höhe für 2 Zeilen */
+}
+
+.seopress-video-category-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.seopress-video-category {
+  font-weight: 500;
+}
+
+.seopress-video-link {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.seopress-video-link:hover {
+  text-decoration: underline;
+}

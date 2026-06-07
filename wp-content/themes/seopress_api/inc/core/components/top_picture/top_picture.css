@@ -1,0 +1,74 @@
+.top-picture {
+    background-size: cover!important;
+    height: 500px;
+    background-position: center center!important;
+    background-repeat: no-repeat!important;
+}
+
+.cta-round {
+    position: absolute;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    padding: 25px 10px;
+    font-size: 20px;
+    width: 150px;
+    height: 150px;
+    margin-left: -90px;
+    margin-top: -50px;
+    transform: rotate(-10deg);
+    border: 2px solid;
+    line-height: 1.2;
+}
+
+.gratis {
+    font-weight: 900;
+    font-size: 2.2em;
+    line-height: 1;
+}
+
+.page-image-title h1 {
+    padding: 10px 15%;
+    max-width: max-content;
+    margin: auto;
+    font-size: 170%;
+    font-weight: 600;
+    text-align: center;
+}
+
+.page-image-title h2 {
+    padding: 10px 15%;
+    max-width: max-content;
+    margin: auto;
+    font-size: 205%;
+    font-weight: 600;
+    text-align: center;
+}
+
+.page-image-title h3 {
+    padding: 10px 100px;
+    max-width: max-content;
+    margin: auto;
+    font-size: 117%;
+    font-weight: 300;
+    text-align: center;
+    text-shadow: 1px 1px lightgrey;
+}
+
+.page-image-title-overlay {
+    background-color: rgba(255, 255, 255, 0.80);
+    border-radius: 25px 0;
+    padding: 15px 0 20px;
+    text-align: center;
+    width: 800px;
+}
+
+.page-image-title {
+    padding: 100px;
+    min-height: 400px;
+    position: relative;
+}
+.page-image-title-small {
+    padding: 100px;
+    position: relative;
+}

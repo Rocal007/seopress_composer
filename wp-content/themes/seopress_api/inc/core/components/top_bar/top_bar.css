@@ -1,0 +1,21 @@
+.topbar {
+    font-family: inherit;
+    font-size: 15px;
+    letter-spacing: 0px;
+    line-height: 22px;
+    text-transform: inherit;
+    color: white;
+    padding: 5px;
+}
+
+.topbar a {
+    color: white;
+}
+
+.topbar-mobile-left {
+    float: left;
+}
+
+.topbar-mobile-right {
+    float: right;
+}

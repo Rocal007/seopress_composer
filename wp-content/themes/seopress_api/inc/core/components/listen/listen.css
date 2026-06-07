@@ -1,0 +1,24 @@
+.listen-container {
+    margin: 50px auto;
+}
+
+.listen-heading {
+    padding-bottom: 30px;
+}
+
+.listen-block-heading {
+    font-size: larger;
+    line-height: 2.3em;
+}
+
+.liste ul li {
+    list-style-type: none;
+    margin-left: -20px;
+    cursor: pointer;
+}
+
+.liste ul li:before {
+    font-family: FontAwesome;
+    content: "\f00c";
+    padding-right: 15px;
+}

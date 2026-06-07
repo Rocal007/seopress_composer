@@ -1,0 +1,121 @@
+/* Gold Plaque Design System V2 */
+.gold-plaque-container-v2 {
+  position: relative;
+  display: inline-block;
+  padding: 4px;
+  background: linear-gradient(to bottom, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+  border-radius: 4px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 0 0 20px rgba(179, 135, 40, 0.4);
+  z-index: 20;
+}
+
+.gold-plaque-frame-v2 {
+  background: linear-gradient(135deg, #cfc09f, #ffecb3, #8a6e2f);
+  padding: 3px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.gold-plaque-inner-v2 {
+  background: radial-gradient(ellipse at center, #7d5d26 0%, #3e2b0e 100%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 1.5rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  position: relative;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.gold-text-main-v2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #e8dcb5;
+  font-size: clamp(1.8rem, 4vw, 3.5rem);
+  letter-spacing: 0.1em;
+  line-height: 1.1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6), 0 0 2px rgba(255, 215, 0, 0.3);
+  background: linear-gradient(to bottom, #fff8db, #d4af37, #996515);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(1px 1px 0 rgba(0, 0, 0, 0.5));
+}
+
+.gold-separator-v2 {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0;
+  gap: 15px;
+}
+
+.gold-separator-v2::before,
+.gold-separator-v2::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+}
+
+.gold-text-sub-v2 {
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+  color: #d4af37;
+  font-size: clamp(0.9rem, 1.5vw, 1.4rem);
+  letter-spacing: 0.15em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.gold-text-bottom-v2 {
+  font-family: 'Playfair Display', serif;
+  font-variant: small-caps;
+  text-transform: uppercase;
+  color: #bf9b30;
+  font-size: clamp(0.8rem, 1.2vw, 1.2rem);
+  letter-spacing: 0.2em;
+  margin-top: 4px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* Gold Button Styles */
+.btn-gold-frame {
+  background: linear-gradient(135deg, #cfc09f, #ffecb3, #8a6e2f);
+  padding: 2px;
+  border-radius: 0.75rem;
+  display: inline-flex;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-gold-frame:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+}
+
+.btn-gold-frame:active {
+  transform: translateY(0);
+}
+
+.btn-gold-inner {
+  background: radial-gradient(ellipse at center, #2d2a26 0%, #1c1917 100%);
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  border-radius: calc(0.75rem - 2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.btn-gold-inner svg {
+  fill: #d4af37;
+}

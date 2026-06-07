@@ -1,0 +1,2 @@
+// Tabs
+export default function initTabs(){document.querySelectorAll('[data-tabs]').forEach(container=>{const buttons=container.querySelectorAll('[data-tab-button]'),panels=container.querySelectorAll('[data-tab-panel]');buttons.forEach((btn,idx)=>{btn.addEventListener('click',()=>{buttons.forEach(b=>b.classList.remove('bg-blue-600','text-white'));panels.forEach(p=>p.classList.add('hidden'));btn.classList.add('bg-blue-600','text-white');panels[idx].classList.remove('hidden');});});});}

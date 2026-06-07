@@ -1,0 +1,42 @@
+/* Navbar Scroll Transitions */
+.navbar {
+  transition: all 0.3s ease;
+  @apply border-b border-base-200;
+  /* Default border */
+}
+
+.navbar.is-scrolled {
+  @apply bg-base-100/90 backdrop-blur-md border-base-300 shadow-md;
+}
+
+/* Shrink Icon Container */
+.navbar.is-scrolled .navbar-start .relative.w-14 {
+  width: 2.5rem !important;
+  /* w-10 */
+  height: 2.5rem !important;
+  /* h-10 */
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+/* Shrink Icon Itself */
+.navbar.is-scrolled .navbar-start .relative.w-12 {
+  width: 2rem !important;
+  /* w-8 */
+  height: 2rem !important;
+  /* h-8 */
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+/* Shrink Text */
+.navbar.is-scrolled .navbar-start .text-2xl {
+  font-size: 1.25rem !important;
+  /* text-xl */
+  transition: font-size 0.3s ease;
+}
+
+/* Hide Location on Scroll */
+.navbar.is-scrolled .navbar-start .text-sm {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}

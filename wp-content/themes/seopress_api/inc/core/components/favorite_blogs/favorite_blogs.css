@@ -1,0 +1,37 @@
+.favorite_blogs {
+    margin-bottom: 50px;
+}
+
+.favorite_blogs-picture {
+    padding: 10px 0;
+    overflow: hidden;
+}
+
+.favorite_blogs-index li {
+    line-height: 1.2em;
+}
+
+.favorite_blogs-content {
+    border-left: 25px solid;
+    margin-top: 11px;
+    min-height: 205px;
+}
+
+.favorite_blogs-content ul {
+    list-style-type: none;
+    margin-left: 10px;
+}
+
+.favorite_blogs-content ul li {
+    margin-left: -10px;
+    display: flex;
+    align-items: center;
+}
+
+.favorite_blogs-content ul li::before {
+    font-family: FontAwesome;
+    content: "\f0a9 ";
+    margin-left: -1.3em;
+    margin-right: 15px;
+    padding: 1px;
+   }

@@ -1,0 +1,198 @@
+<?php
+
+if ( function_exists( 'acf_add_local_field_group' ) ) :
+
+    acf_add_local_field_group( array(
+        'key' => 'group_6280f4fe1a095',
+        'title' => 'Icons Hauptseiten',
+        'fields' => array(
+            array(
+                'key' => 'field_628f60e7e4143',
+                'label' => 'Icons',
+                'name' => 'hauptseiten_icon',
+                'type' => 'checkbox',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => 'acfe-choices-columns acfe-choices-columns-3', // ⭐ 3-column layout (ACF Extended)
+                    'id' => '',
+                ),
+                'choices' => array(
+                    '3. Generation' => '3. Generation',
+                    'Aktenvernichtung' => 'Aktenvernichtung',
+                    'Antiquitäten Ankauf' => 'Antiquitäten Ankauf',
+                    'Antiquitäten Briefmarke' => 'Antiquitäten Briefmarke',
+                    'Antiquitäten Dosen' => 'Antiquitäten Dosen',
+                    'Antiquitäten Gemälde' => 'Antiquitäten Gemälde',
+                    'Antiquitäten Krug' => 'Antiquitäten Krug',
+                    'Antiquitäten Münzen' => 'Antiquitäten Münzen',
+                    'Antiquitäten Orden' => 'Antiquitäten Orden',
+                    'Antiquitäten Religion' => 'Antiquitäten Religion',
+                    'Antiquitäten Teppich' => 'Antiquitäten Teppich',
+                    'Antiquitäten Uhr' => 'Antiquitäten Uhr',
+                    'Barzahlung' => 'Barzahlung',
+                    'Besichtigung' => 'Besichtigung',
+                    'Büroräumung' => 'Büroräumung',
+                    'Dachböden' => 'Dachböden',
+                    'Demontage' => 'Demontage',
+                    'Demontage/Montage' => 'Demontage/Montage',
+                    'Diskretion' => 'Diskretion',
+                    'Dummy' => 'Dummy',
+                    'E-Mail' => 'E-Mail',
+                    'Entrümpelungen' => 'Entrümpelungen',
+                    'Facebook' => 'Facebook',
+                    'FAQ' => 'FAQ',
+                    'FAQ (Glühbirne)' => 'FAQ (Glühbirne)',
+                    'Festpreisangebot (Variante 1)' => 'Festpreisangebot (Variante 1)',
+                    'Festpreisangebot (Variante 2)' => 'Festpreisangebot (Variante 2)',
+                    'Festpreisangebot (Variante 3)' => 'Festpreisangebot (Variante 3)',
+                    'Festpreisangebot (Variante 4)' => 'Festpreisangebot (Variante 4)',
+                    'Fixpreis' => 'Fixpreis',
+                    'Formular' => 'Formular',
+                    'Geschäftsauflösung' => 'Geschäftsauflösung',
+                    'Handwerker' => 'Handwerker',
+                    'Haus' => 'Haus',
+                    'Hotelräumung' => 'Hotelräumung',
+                    'Instagram' => 'Instagram',
+                    'Kellerräumung' => 'Kellerräumung',
+                    'Makler' => 'Makler',
+                    'Messie' => 'Messie',
+                    'Mobil' => 'Mobil',
+                    'Räumung (Variante 1)' => 'Räumung (Variante 1)',
+                    'Räumung (Variante 2)' => 'Räumung (Variante 2)',
+                    'Reinigung' => 'Reinigung',
+                    'Reinigung (Kübel)' => 'Reinigung (Kübel)',
+                    'Renovierung (Variante 1)' => 'Renovierung (Variante 1)',
+                    'Renovierung (Variante 2)' => 'Renovierung (Variante 2)',
+                    'Sicherheit (Regenschirm)' => 'Sicherheit (Regenschirm)',
+                    'Suche' => 'Suche',
+                    'Teilumzug' => 'Teilumzug',
+                    'Telefon' => 'Telefon',
+                    'Tipp' => 'Tipp',
+                    'Transport' => 'Transport',
+                    'Uhr' => 'Uhr',
+                    'Umwelt' => 'Umwelt',
+                    'Umzug' => 'Umzug',
+                    'Umzug/Übersiedelung' => 'Umzug/Übersiedelung',
+                    'Verlassenschaft (Variante 1)' => 'Verlassenschaft (Variante 1)',
+                    'Verlassenschaft (Variante 2)' => 'Verlassenschaft (Variante 2)',
+                    'Verschenken' => 'Verschenken',
+                    'Vorteile' => 'Vorteile',
+                    'Wertausgleich' => 'Wertausgleich',
+                    'Whatsapp' => 'Whatsapp',
+                    'Wohnungsauflösung' => 'Wohnungsauflösung',
+                    'Zusatzleistungen' => 'Zusatzleistungen',
+                    'Alte_kunst' => 'Alte_kunst',
+                    'Moderne_kunst' => 'Moderne_kunst',
+                    'Sakrale_kunst' => 'Sakrale_kunst',
+                    'Buecher_zeitung' => 'Buecher_zeitung',
+                    'Oldtimer_auto' => 'Oldtimer_auto',
+                    'Oldtimer_motorrad' => 'Oldtimer_motorrad',
+                    'Antik_muenzen' => 'Antik_muenzen',
+                    'Stecker' => 'Stecker',
+                    'Personenschutz' => 'Personenschutz',
+                    'Videos' => 'videos',
+                    'next' => 'next',
+                    'before' => 'before'
+                ),
+                'allow_custom' => 0,
+                'default_value' => array(),
+                'layout' => 'vertical',
+                'toggle' => 0,
+                'return_format' => 'label',
+                'save_custom' => 0,
+            ),
+        ),
+
+        'location' => array(
+            array(
+                array(
+                    'param' => 'post_template',
+                    'operator' => '==',
+                    'value' => 'template-hauptseiten.php',
+                ),
+            ),
+            array(
+                array(
+                    'param' => 'post_template',
+                    'operator' => '==',
+                    'value' => 'template-startseite.php',
+                ),
+            ),
+            array(
+                array(
+                    'param' => 'post_template',
+                    'operator' => '==',
+                    'value' => 'template-impressum.php',
+                ),
+            ),
+            array(
+                array(
+                    'param' => 'post_template',
+                    'operator' => '==',
+                    'value' => 'template-ueber-uns.php',
+                ),
+            ),
+            array(
+                array(
+                    'param' => 'post_template',
+                    'operator' => '==',
+                    'value' => 'template-datenschutz-agb.php',
+                ),
+            ),
+            array(
+                array(
+                    'param' => 'post_template',
+                    'operator' => '==',
+                    'value' => 'template-ratgeber.php',
+                ),
+            ),
+            array(
+                array(
+                    'param' => 'post_template',
+                    'operator' => '==',
+                    'value' => 'faq.php',
+                ),
+            ),
+            array(
+                array(
+                    'param' => 'post_template',
+                    'operator' => '==',
+                    'value' => 'template_blog.php',
+                ),
+            ),
+            array(
+                array(
+                    'param' => 'post_template',
+                    'operator' => '==',
+                    'value' => 'template-entsorgung.php',
+                ),
+            ),
+            array(
+                array(
+                    'param' => 'post_template',
+                    'operator' => '==',
+                    'value' => 'template-videos.php',
+                ),
+            ),
+        ),
+
+        'menu_order' => 0,
+        'position' => 'normal',
+        'style' => 'default',
+        'label_placement' => 'left',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => '',
+        'active' => true,
+        'description' => '',
+
+        'acfe_display_title' => '',
+        'acfe_autosync' => array('php'),
+        'acfe_form' => 0,
+        'acfe_meta' => '',
+        'acfe_note' => '',
+    ) );
+
+endif;

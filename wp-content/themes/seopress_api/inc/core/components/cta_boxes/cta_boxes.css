@@ -1,0 +1,68 @@
+.ablauf-container {
+    margin: 0 auto 100px auto;
+}
+
+.ablauf-box {
+    border-radius: 20px;
+    border: 2px solid;
+    min-height: 25em;
+    padding: 30px;
+    margin-top: 100px;
+}
+
+.ablauf-icon {
+    height: 100px;
+    margin-top: -88px;
+    margin-bottom: 30px;
+}
+
+.ablauf-heading {
+    margin-bottom: 30px;
+    margin-left: 5%;
+    font-size: x-large;
+}
+
+.ablauf-caption {
+    padding: 20px;
+}
+
+.ablauf-content {
+    margin-bottom: 1em;
+}
+
+.ablauf-button {
+    border-radius: 10px;
+    position: absolute;
+    bottom: 83px;
+    width: 75%;
+}
+
+.ablauf-button > button:hover,
+.ablauf-button > button:active {
+    color: white;
+    outline: none;
+    border: grey;
+    background-color: grey;
+}
+
+.ablauf-button > button:focus {
+    color: white;
+    outline: none;
+}
+
+.ablauf-button:focus {
+    color: white;
+    outline: none;
+}
+
+.badge {
+    padding: 7px 16px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: 100%;
+    margin-top: -26px;
+    margin-left: 80px;
+}

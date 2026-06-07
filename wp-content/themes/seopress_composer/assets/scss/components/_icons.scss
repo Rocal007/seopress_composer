@@ -1,0 +1,33 @@
+.illu {
+  fill: none;
+  stroke-width: 5px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: currentColor;
+}
+
+.rahmen {
+  fill: none;
+  stroke-width: 5px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: currentColor;
+}
+
+.illu-invert {
+  stroke: #ffffff;
+  fill: none;
+  stroke-width: 6px;
+}
+
+.rahmen-invert {
+  stroke: white;
+  fill: none;
+  stroke-width: 5px;
+}
+
+.rahmen-none {
+  stroke: none;
+  stroke-width: 0;
+  fill: none;
+}

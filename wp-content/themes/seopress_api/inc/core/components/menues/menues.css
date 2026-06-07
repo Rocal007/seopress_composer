@@ -1,0 +1,24 @@
+.row_menu-image {
+    padding: 25px;
+}
+
+.row_menu-title {
+    font-size: smaller;
+    font-weight: 600;
+    margin-top: -20px;
+}
+
+.row_menue-title.text-center {
+    font-size: smaller;
+    font-weight: 600;
+    margin-top: -20px;
+}
+
+.image-menue-icon {
+    margin-right: 15px;
+    width: 15%;
+}
+
+.image-menue-title {
+    font-weight: bold;
+}

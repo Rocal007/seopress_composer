@@ -1,0 +1,575 @@
+@tailwind base;
+@tailwind components;
+
+@layer components {
+
+  /* Icon styles - in components layer to prevent Tailwind purging */
+  .illu {
+    fill: none;
+    stroke-width: 5px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: currentColor;
+  }
+
+  .rahmen {
+    fill: none;
+    stroke-width: 5px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: currentColor;
+  }
+
+  .illu-invert {
+    stroke: #ffffff;
+    fill: none;
+    stroke-width: 6px;
+  }
+
+  .rahmen-invert {
+    stroke: white;
+    fill: none;
+    stroke-width: 5px;
+  }
+
+  .rahmen-none {
+    stroke: none;
+    stroke-width: 0;
+    fill: none;
+  }
+
+  /* Button styles using CSS variables */
+  .btn {
+    @apply font-heading font-semibold transition-all duration-200;
+  }
+
+  .btn-primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: white;
+
+    &:hover {
+      background-color: color-mix(in srgb, var(--color-primary) 85%, black);
+      border-color: color-mix(in srgb, var(--color-primary) 85%, black);
+    }
+
+    &:active {
+      background-color: color-mix(in srgb, var(--color-primary) 75%, black);
+      border-color: color-mix(in srgb, var(--color-primary) 75%, black);
+    }
+  }
+
+  .btn-secondary {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+    color: white;
+
+    &:hover {
+      background-color: color-mix(in srgb, var(--color-secondary) 85%, black);
+      border-color: color-mix(in srgb, var(--color-secondary) 85%, black);
+    }
+
+    &:active {
+      background-color: color-mix(in srgb, var(--color-secondary) 75%, black);
+      border-color: color-mix(in srgb, var(--color-secondary) 75%, black);
+    }
+  }
+
+  .btn-accent {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: white;
+
+    &:hover {
+      background-color: color-mix(in srgb, var(--color-accent) 85%, black);
+      border-color: color-mix(in srgb, var(--color-accent) 85%, black);
+    }
+
+    &:active {
+      background-color: color-mix(in srgb, var(--color-accent) 75%, black);
+      border-color: color-mix(in srgb, var(--color-accent) 75%, black);
+    }
+  }
+
+  /* Outline Button overrides using theme colors and good contrast */
+  .btn-outline {
+    &.btn-primary {
+      color: var(--color-primary);
+      border-color: var(--color-primary);
+      background-color: transparent;
+
+      &:hover {
+        background-color: var(--color-primary);
+        border-color: var(--color-primary);
+        color: white;
+      }
+    }
+
+    &.btn-secondary {
+      color: var(--color-secondary);
+      border-color: var(--color-secondary);
+      background-color: transparent;
+
+      &:hover {
+        background-color: var(--color-secondary);
+        border-color: var(--color-secondary);
+        color: white;
+      }
+    }
+
+    &.btn-accent {
+      color: var(--color-accent);
+      border-color: var(--color-accent);
+      background-color: transparent;
+
+      &:hover {
+        background-color: var(--color-accent);
+        border-color: var(--color-accent);
+        color: white;
+      }
+    }
+  }
+
+  /* Badge styles using CSS variables to match theme */
+  .badge-primary {
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
+    color: white;
+
+    &.badge-outline {
+      background-color: transparent;
+      color: var(--color-primary);
+    }
+  }
+
+  .badge-secondary {
+    border-color: var(--color-secondary);
+    background-color: var(--color-secondary);
+    color: white;
+
+    &.badge-outline {
+      background-color: transparent;
+      color: var(--color-secondary);
+    }
+  }
+
+  .badge-accent {
+    border-color: var(--color-accent);
+    background-color: var(--color-accent);
+    color: white;
+
+    &.badge-outline {
+      background-color: transparent;
+      color: var(--color-accent);
+    }
+  }
+
+  .badge-error,
+  .badge-danger {
+    border-color: var(--color-danger);
+    background-color: var(--color-danger);
+    color: white;
+
+    &.badge-outline {
+      background-color: transparent;
+      color: var(--color-danger);
+    }
+  }
+}
+
+@tailwind utilities;
+
+body {
+  @apply bg-gray-50 text-gray-800;
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight, 700);
+}
+
+.wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+
+@layer utilities {
+  .bg-silver-shine {
+    background: linear-gradient(110deg,
+        #9ca3af 0%,
+        #d1d5db 20%,
+        #f3f4f6 50%,
+        #d1d5db 80%,
+        #9ca3af 100%);
+  }
+
+  .bg-gold-shine {
+    background: linear-gradient(110deg,
+        #8B6508 0%,
+        #A67C00 20%,
+        #FFD700 50%,
+        #A67C00 80%,
+        #8B6508 100%);
+  }
+
+  .text-shimmer {
+    background: linear-gradient(to right,
+        #4b5563 20%,
+        #9ca3af 50%,
+        #4b5563 80%);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+
+  .text-gold-shimmer {
+    background: linear-gradient(to right,
+        #8B6508 20%,
+        #FFD700 50%,
+        #8B6508 80%);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+}
+
+.seopress-composer-hidden {
+  @apply -translate-y-full;
+}
+
+/* Hero text alignment with logo */
+@media (min-width: 1024px) {
+  [data-lg-margin="71px"] {
+    margin-left: 100px !important;
+  }
+}
+
+/* ============================================================================
+   ACCESSIBILITY UTILITIES (WCAG 2.1 AA Compliance)
+   ============================================================================ */
+
+/* Skip to Content Link - WCAG 2.4.1 Bypass Blocks */
+.skip-to-content {
+  @apply absolute left-0 top-0 z-[9999] px-4 py-2 bg-primary text-white font-bold;
+  @apply transform -translate-y-full transition-transform duration-200;
+
+  &:focus {
+    @apply translate-y-0;
+  }
+}
+
+/* Screen Reader Only Text - WCAG 1.3.1 Info and Relationships */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only-focusable:focus,
+.sr-only-focusable:active {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* Enhanced Focus Styles - WCAG 2.4.7 Focus Visible */
+*:focus {
+  outline: 2px solid var(--color-primary, #3b82f6);
+  outline-offset: 2px;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 3px solid var(--color-primary, #3b82f6);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* High Contrast Focus for Links and Buttons */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--color-primary, #3b82f6);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 5px rgba(59, 130, 246, 0.15);
+}
+
+/* Skip Focus for Decorative Elements */
+[aria-hidden="true"]:focus {
+  outline: none;
+}
+
+/* Keyboard Navigation Indicators */
+.keyboard-nav *:focus {
+  outline: 3px dashed var(--color-accent, #f59e0b);
+  outline-offset: 3px;
+}
+
+/* High Contrast Mode Support - WCAG 1.4.3 Contrast */
+@media (prefers-contrast: high) {
+  * {
+    border-color: currentColor !important;
+  }
+
+  .btn {
+    border: 2px solid currentColor !important;
+  }
+}
+
+/* Reduced Motion Support - WCAG 2.3.3 Animation from Interactions */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .seopress-composer-hidden {
+    transition: none !important;
+  }
+}
+
+/* Focus Within for Container Elements */
+.focus-within-highlight:focus-within {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  border-color: var(--color-primary, #3b82f6);
+}
+
+/* Accessible Color Contrast Helpers */
+.text-contrast-high {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.text-contrast-high-inverse {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+/* ARIA Live Region Styling */
+[aria-live="polite"],
+[aria-live="assertive"] {
+  @apply sr-only;
+}
+
+/* Accessible Form Elements */
+input:invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown),
+select:invalid {
+  border-color: var(--color-danger, #ef4444);
+  outline-color: var(--color-danger, #ef4444);
+}
+
+input:valid:not(:placeholder-shown),
+textarea:valid:not(:placeholder-shown),
+select:valid {
+  border-color: var(--color-success, #10b981);
+}
+
+/* Error Message Styling */
+.error-message {
+  @apply text-danger text-sm mt-1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.error-message::before {
+  content: "⚠";
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* Success Message Styling */
+.success-message {
+  @apply text-success text-sm mt-1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.success-message::before {
+  content: "✓";
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* Accessible Button States */
+button:disabled,
+input:disabled,
+select:disabled,
+textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+button[aria-pressed="true"] {
+  background-color: var(--color-primary, #3b82f6);
+  color: white;
+}
+
+/* Accessible Link Styling - WCAG 1.4.1 Use of Color */
+a:not(.btn) {
+  text-decoration: none;
+}
+
+a:not(.btn):hover {
+  text-decoration: none;
+}
+
+/* Current Page Indicator */
+[aria-current="page"],
+[aria-current="true"] {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+/* Accessible Table Support */
+table {
+  border-collapse: collapse;
+}
+
+th {
+  font-weight: bold;
+  text-align: left;
+}
+
+caption {
+  @apply sr-only;
+}
+
+/* Print Styles for Accessibility */
+@media print {
+
+  .skip-to-content,
+  .sr-only {
+    display: none !important;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1.33;
+  }
+}
+
+/* ============================================================================
+   HERO GOLD PLAQUE COMPONENT (Boxed Variant)
+   Extracted from inline <style> in Hero.php for cacheability and performance.
+   ============================================================================ */
+
+.gold-plaque-container-v2 {
+  position: relative;
+  display: inline-block;
+  padding: 4px;
+  background: linear-gradient(to bottom, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+  border-radius: 4px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 0 0 20px rgba(179, 135, 40, 0.4);
+  margin-bottom: 0;
+  z-index: 20;
+}
+
+.gold-plaque-frame-v2 {
+  background: linear-gradient(135deg, #cfc09f, #ffecb3, #8a6e2f);
+  padding: 3px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.gold-plaque-inner-v2 {
+  background: radial-gradient(ellipse at center, #7d5d26 0%, #3e2b0e 100%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 1.5rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  position: relative;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.gold-text-main-v2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #e8dcb5;
+  font-size: clamp(1.8rem, 4vw, 3.5rem);
+  letter-spacing: 0.1em;
+  line-height: 1.7;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6), 0 0 2px rgba(255, 215, 0, 0.3);
+  background: linear-gradient(to bottom, #fff8db, #d4af37, #996515);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(1px 1px 0 rgba(0, 0, 0, 0.5));
+}
+
+.gold-separator-v2 {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0;
+  gap: 15px;
+
+  &::before,
+  &::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #d4af37, transparent);
+  }
+}
+
+.gold-text-sub-v2 {
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+  color: #d4af37;
+  font-size: clamp(0.9rem, 1.5vw, 1.4rem);
+  letter-spacing: 0.15em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.gold-text-bottom-v2 {
+  font-family: 'Playfair Display', serif;
+  font-variant: small-caps;
+  text-transform: uppercase;
+  color: #bf9b30;
+  font-size: clamp(0.8rem, 1.2vw, 1.2rem);
+  letter-spacing: 0.2em;
+  margin-top: 4px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}

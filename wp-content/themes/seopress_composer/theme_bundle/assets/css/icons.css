@@ -1,0 +1,40 @@
+/* Icon styles for SVG elements */
+.illu {
+  fill: none;
+  stroke-width: 14px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: currentColor;
+}
+
+.rahmen {
+  fill: none;
+  stroke-width: 5px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: currentColor;
+}
+
+.illu-invert {
+  stroke: #ffffff;
+  fill: none;
+  stroke-width: 12px;
+}
+
+.rahmen-invert {
+  stroke: white;
+  fill: none;
+  stroke-width: 5px;
+}
+
+.rahmen-none {
+  stroke: none;
+  stroke-width: 0;
+  fill: none;
+}
+
+/* Hide the outer circle from SVG icons in footer */
+.bg-white\/10 circle.text-primary,
+.bg-white\/10 circle.fill-current {
+  display: none;
+}

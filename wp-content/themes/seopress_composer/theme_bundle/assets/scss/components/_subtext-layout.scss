@@ -1,0 +1,86 @@
+/* Subtext Layout - Text Wrapping around Images */
+
+.subtext-block {
+  /* Ensure proper text flow */
+  overflow: hidden;
+}
+
+.subtext-content {
+  /* Smooth transitions for expand/collapse */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Float behavior for images */
+@media (min-width: 1024px) {
+
+  .subtext-block figure.float-left,
+  .subtext-block figure.float-right {
+    /* Ensure image stays floated on desktop */
+    max-width: 45%;
+  }
+}
+
+/* Mobile: Stack image above text */
+@media (max-width: 1023px) {
+
+  .subtext-block figure.float-left,
+  .subtext-block figure.float-right {
+    float: none !important;
+    margin: 0 0 1.5rem 0 !important;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+/* Read More Button */
+.read-more-btn {
+  cursor: pointer;
+  clear: both;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  border: none;
+  background: none;
+  transition: all 0.2s ease;
+}
+
+.read-more-btn:hover {
+  transform: translateX(4px);
+}
+
+.read-more-btn .btn-icon {
+  transition: transform 0.3s ease;
+}
+
+.read-more-btn .btn-icon.rotate-180 {
+  transform: rotate(180deg);
+}
+
+/* Content Preview/Full */
+.content-preview,
+.content-full {
+  transition: opacity 0.3s ease;
+}
+
+/* Ensure text flows nicely around image */
+.subtext-block .prose {
+  /* Allow text to wrap around floated image */
+  overflow: visible;
+}
+
+.subtext-block .prose p {
+  /* Better text flow */
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* Clear float helper */
+.clear-both {
+  clear: both;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
